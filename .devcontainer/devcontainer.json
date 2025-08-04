@@ -1,16 +1,14 @@
 {
 	"name": "Debian",
 	"image": "mcr.microsoft.com/devcontainers/base:bullseye",
-	"features": {
-		"ghcr.io/prulloac/devcontainer-features/latex:1": {}
-	},
 	"customizations": {
 		"vscode": {
 			"extensions": [
+				"James-Yu.latex-workshop",
 				"streetsidesoftware.code-spell-checker",
 				"vsls-contrib.gitdoc"
 			]
 		}
 	},
-	"postCreateCommand": "sudo tlmgr install vntex"
+	"postCreateCommand": "sudo apt-get update && sudo apt-get install latexmk texlive-extra-utils texlive-fonts-recommended texlive-lang-other -y"
 }
