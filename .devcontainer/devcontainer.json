@@ -1,0 +1,16 @@
+{
+	"name": "Debian",
+	"image": "mcr.microsoft.com/devcontainers/base:bullseye",
+	"features": {
+		"ghcr.io/prulloac/devcontainer-features/latex:1": {}
+	},
+	"customizations": {
+		"vscode": {
+			"extensions": [
+				"streetsidesoftware.code-spell-checker",
+				"vsls-contrib.gitdoc"
+			]
+		}
+	},
+	"postCreateCommand": "sudo tlmgr install vntex"
+}
