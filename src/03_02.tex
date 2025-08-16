@@ -1,7 +1,8 @@
-\documentclass[12pt]{article}
+\documentclass[11pt]{article}
 \usepackage[utf8]{inputenc}
 \usepackage{enumitem}
 \setlist[itemize]{leftmargin=\parindent, itemsep=0pt, parsep=0pt, topsep=0pt}
+\usepackage{amsmath}
 \usepackage[T5]{fontenc}
 \usepackage[vietnamese]{babel}
 \usepackage[margin=2.5cm]{geometry}
@@ -20,7 +21,7 @@
 \fancyhf{}
 \fancyhead[L]{\textbf{TÊN TRUNG TÂM}}
 \fancyhead[C]{\textbf{ZALO LIÊN HỆ}}
-\fancyhead[R]{\textbf{Toán 6}}
+\fancyhead[R]{\textbf{BDVH LỚP 6-7-8-9}}
 \fancyfoot[C]{\thepage}
 \renewcommand{\footrulewidth}{0.4pt}
 \renewcommand\thesection{\arabic{section}.}
@@ -29,9 +30,7 @@
 \textbf{%
 \begin{tabular}{ll}
 Bài 2 & Hình chữ nhật – Hình thoi \\
-      & Hình bình hành – Hình thang cân \\
-      & {\small Từ khoá: Hình chữ nhật; Hình thoi; Hình bình hành; Hình thang cân.
-} \\ % smaller subtitle
+      & Hình bình hành – Hình thang cân
 \end{tabular}%
 }}
 \date{}
@@ -49,7 +48,7 @@ Hình chữ nhật \(ABCD\) (Hình 1) có:
   \item[--] Hai cặp cạnh đối diện song song: \(AB\) song song với \(CD\); \(BC\) song song với \(AD\).
   \item[--] Bốn góc đỉnh \(A\), \(B\), \(C\), \(D\) bằng nhau và bằng góc vuông.
   \item[--] Hai đường chéo bằng nhau và cắt nhau tại trung điểm của mỗi đường:
-  \item[] AC = BD \text{ và } OA = OC; OB = OD.
+  \item[] AC = BD \text{ và } OA = OC;\ OB = OD.
 \end{itemize}
 \switchcolumn
 \centering
@@ -91,7 +90,7 @@ Hình thoi \(ABCD\) (Hình 2) có:
 \centering
 \begin{tikzpicture}[scale=1]
   \def\hx{1.73} 
-  \def\hy{0.5}
+  \def\hy{1}
   \def\ra{0.18} 
   \coordinate (O) at (0,0);
   \coordinate (A) at (-\hx,0);
@@ -181,4 +180,730 @@ Hình thang \(ABCD\) như thế được gọi là \textbf{hình thang cân}.
 \end{tikzpicture}
 \end{center}
 \end{paracol}
+
+\newpage
+
+\begin{center}
+\section*{Bài tập}
+\end{center}
+
+\subsection*{Dạng 1 – Nhận biết hình chữ nhật.}
+
+\subsubsection*{Bài 1:} Trong các hình sau đây, hình nào là hình chữ nhật? Vì sao?
+
+\begin{center}
+\begin{tikzpicture}[scale=0.8]
+% Figure 1 - Rectangle
+\draw[thick, blue] (0,0) rectangle (2,1.5);
+\fill[red] (0,0) circle (2pt);
+\fill[red] (2,0) circle (2pt);
+\fill[red] (2,1.5) circle (2pt);
+\fill[red] (0,1.5) circle (2pt);
+\node at (1,0.75) {1};
+
+% Figure 2 - Parallelogram
+\draw[thick, blue] (3.5,0) -- (5.5,0) -- (6.5,1.5) -- (4.5,1.5) -- cycle;
+\fill[red] (3.5,0) circle (2pt);
+\fill[red] (5.5,0) circle (2pt);
+\fill[red] (6.5,1.5) circle (2pt);
+\fill[red] (4.5,1.5) circle (2pt);
+\node at (5,0.75) {2};
+
+% Figure 3 - Rectangle (vertical)
+\draw[thick, blue] (8,0) rectangle (9.5,1.5);
+\fill[red] (8,0) circle (2pt);
+\fill[red] (9.5,0) circle (2pt);
+\fill[red] (9.5,1.5) circle (2pt);
+\fill[red] (8,1.5) circle (2pt);
+\node at (8.75,0.75) {3};
+
+% Figure 4 - Rectangle
+\draw[thick, blue] (11,0) rectangle (13,1.5);
+\fill[red] (11,0) circle (2pt);
+\fill[red] (13,0) circle (2pt);
+\fill[red] (13,1.5) circle (2pt);
+\fill[red] (11,1.5) circle (2pt);
+\node at (12,0.75) {4};
+
+\end{tikzpicture}
+\end{center}
+
+\subsection*{Dạng 2 – Diện tích hình chữ nhật}
+
+\subsubsection*{Bài 2:} Tính diện tích của hình chữ nhật ABCD trong các trường hợp sau:
+
+1) Chiều dài AB là 5cm, chiều rộng AD là 4cm.
+
+2) Nửa chu vi của hình chữ nhật ABCD là 10dm, chiều dài AB là 6dm.
+
+3) Chu vi của hình chữ nhật ABCD là 36m, chiều dài AB dài hơn chiều rộng AD là 2m.
+
+\subsubsection*{Bài 3:} Hãy tính chu vi hình chữ nhật ABCD. Biết rằng nó có diện tích là 75cm$^2$, và chiều dài gấp 3 lần chiều rộng.
+
+\subsubsection*{Bài 4:} Một phòng học hình chữ nhật có kích thước như hình vẽ bên dưới. Biết rằng cứ mỗi 6m$^2$ thì người ta xếp vào một bộ bàn ghế sao cho đều nhau và kín phòng học.
+
+1) Hãy tính diện tích của phòng học.
+
+2) Biết mỗi bộ bàn ghế chứa được 4 học sinh. Hỏi tối đa phòng học chứa được bao nhiều học sinh?
+
+\begin{center}
+\begin{tikzpicture}[scale=0.3]
+% Rectangle representing the classroom
+\draw[thick, blue] (0,0) rectangle (24,10);
+\fill[red] (0,0) circle (3pt);
+\fill[red] (24,0) circle (3pt);
+\fill[red] (24,10) circle (3pt);
+\fill[red] (0,10) circle (3pt);
+
+% Dimension labels
+\node[above] at (12,10) {24m};
+\node[left] at (0,5) {10m};
+
+\end{tikzpicture}
+\end{center}
+
+\subsection*{Dạng 3 – Nhận biết hình thang.}
+
+\subsubsection*{Bài 1:} Trong các hình sau đây, hình nào là hình thang? Vì sao?
+
+\begin{center}
+\begin{tikzpicture}[scale=0.6]
+% Grid background
+\draw[gray!20, very thin] (0,0) grid[step=0.5] (15,3);
+
+% Figure 1 - Trapezoid
+\draw[thick, blue] (0.5,0.5) -- (3,0.5) -- (2.5,2.5) -- (1,2.5) -- cycle;
+\node at (1.75,1.5) {1};
+
+% Figure 2 - Irregular quadrilateral 
+\draw[thick, blue] (4,0.5) -- (6.5,0.5) -- (6,2) -- (4.5,2.5) -- cycle;
+\node at (5.25,1.5) {2};
+
+% Figure 3 - Rectangle (also a trapezoid)
+\draw[thick, blue] (8,0.5) rectangle (10.5,2.5);
+\node at (9.25,1.5) {3};
+
+% Figure 4 - Right trapezoid
+\draw[thick, blue] (12,0.5) -- (14.5,0.5) -- (14.5,2.5) -- (12.5,2.5) -- cycle;
+\node at (13.25,1.5) {4};
+\end{tikzpicture}
+\end{center}
+
+\subsection*{Dạng 4 – Diện tích hình thang}
+
+\subsubsection*{Bài 1:} Tính diện tích hình thang ABCD biết:
+
+1) Độ dài 2 đáy lần lượt là 12cm và 8cm, chiều cao là 5cm.
+
+2) Độ dài 2 đáy lần lượt là 20cm và 10cm, chiều cao là 7cm.
+
+\subsubsection*{Bài 2:} Tính diện tích các hình thang ABCD, KIFG trong hình vẽ sau:
+
+\begin{center}
+\begin{tikzpicture}[scale=0.8]
+% Trapezoid ABCD
+\coordinate (A) at (0,3);
+\coordinate (B) at (3,3);
+\coordinate (C) at (5,0);
+\coordinate (D) at (-1,0);
+\coordinate (H) at (0,0);
+
+\draw[thick, blue] (A) -- (B) -- (C) -- (D) -- cycle;
+\draw[thick] (A) -- (H);
+\draw (H) rectangle +(0.3,0.3);
+
+% Labels for ABCD
+\node[above] at (A) {A};
+\node[above] at (B) {B};
+\node[below] at (C) {C};
+\node[below] at (D) {D};
+\node[below] at (H) {H};
+
+% Measurements for ABCD
+\node[above] at (1.5,3) {4cm};
+\node[left] at (-0.5,1.5) {5cm};
+\node[below] at (2,0) {9cm};
+
+% Trapezoid KIFG
+\coordinate (K) at (8,3);
+\coordinate (I) at (9,3);
+\coordinate (F) at (11,0);
+\coordinate (G) at (7,0);
+\coordinate (H2) at (8,0);
+
+\draw[thick, blue] (K) -- (I) -- (F) -- (G) -- cycle;
+\draw[thick] (K) -- (H2);
+\draw (H2) rectangle +(0.3,0.3);
+
+% Labels for KIFG
+\node[above] at (K) {K};
+\node[above] at (I) {I};
+\node[below] at (F) {F};
+\node[below] at (G) {G};
+\node[below] at (H2) {H};
+
+% Measurements for KIFG
+\node[above] at (8.5,3) {2cm};
+\node[left] at (7.5,1.5) {3cm};
+\node[below] at (9,0) {6cm};
+\end{tikzpicture}
+\end{center}
+
+\subsubsection*{Bài 3:} Cho hình thang ABCD, hãy tính trong mỗi trường hợp sau:
+
+1) Hãy tính độ dài chiều cao AH. Biết diện tích ABCD = 75cm$^2$ và tổng độ dài 2 đáy AB và CD là 30cm.
+
+2) Tính độ dài đáy lớn CD. Biết chiều cao AH = 4cm, diện tích ABCD = 60cm$^2$ và đáy bé AB = 10cm.
+
+3) Tính độ dài đáy bé AB. Biết chiều cao AH = 5cm, diện tích ABCD = 80cm$^2$, đáy lớn CD dài hơn đáy bé AB là 6cm.
+
+4) Tính độ dài đáy lớn CD. Biết chiều cao AH = 6cm, diện tích ABCD = 120cm$^2$, đáy lớn CD dài gấp 3 lần đáy bé AB.
+
+\subsubsection*{Bài 4:} Một thửa ruộng hình thang có độ dài hai đáy lần lượt là 110m và 90m. Chiều cao bằng trung bình cộng của hai đáy. Hãy tính diện tích thửa ruộng.
+
+\subsubsection*{Bài 5:} Một thửa ruộng hình thang ABCD có diện tích là 1155m$^2$, và có đáy bé kém đáy lớn 33m. Người ta kéo dài đáy bé thêm 20m và kéo dài đáy lớn thêm 5m về cùng một phía để được hình thang AEGD mới. Diện tích hình thang mới này bằng diện tích của một hình chữ nhật có chiều rộng là 30m và chiều dài 51m. Hãy tính đáy bé, đáy lớn của thửa ruộng ban đầu.
+
+\begin{center}
+\begin{tikzpicture}[scale=0.6]
+% Original trapezoid ABCD and extended AEGD
+\coordinate (A) at (0,3);
+\coordinate (B) at (3,3);
+\coordinate (C) at (7,0);
+\coordinate (D) at (-1,0);
+\coordinate (E) at (5,3);
+\coordinate (G) at (8,0);
+
+\draw[thick, blue] (A) -- (B) -- (C) -- (D) -- cycle;
+\draw[thick, red] (A) -- (E) -- (G) -- (D) -- cycle;
+\draw[dashed] (B) -- (E);
+\draw[dashed] (C) -- (G);
+
+% Labels
+\node[above] at (A) {A};
+\node[above] at (B) {B};
+\node[above] at (E) {E};
+\node[below] at (C) {C};
+\node[below] at (D) {D};
+\node[below] at (G) {G};
+
+% Red dots
+\fill[red] (A) circle (2pt);
+\fill[red] (B) circle (2pt);
+\fill[red] (C) circle (2pt);
+\fill[red] (D) circle (2pt);
+\fill[red] (E) circle (2pt);
+\fill[red] (G) circle (2pt);
+\end{tikzpicture}
+\end{center}
+
+\subsubsection*{Bài 6:} Một mảnh đất hình thang có diện tích 455m$^2$, chiều cao là 13m. Tính độ dài mỗi đáy của miếng đất hình thang đó, biết đáy lớn hơn đáy bé là 5m.
+
+\subsubsection*{Bài 7:} Một hình thang vuông có đáy bé bằng $\frac{3}{5}$ đáy lớn và chiều cao bằng 23m. Người ta mở rộng hình thang để được một hình chữ nhật thì diện tích của nó tăng thêm lên 414m$^2$. Hãy tính diện tích hình thang ban đầu.
+
+\begin{center}
+\begin{tikzpicture}[scale=0.6]
+% Right trapezoid becoming rectangle
+\coordinate (A) at (0,3);
+\coordinate (B) at (2.4,3);
+\coordinate (C) at (4,0);
+\coordinate (D) at (0,0);
+\coordinate (E) at (4,3);
+
+\draw[thick, blue] (A) -- (B) -- (C) -- (D) -- cycle;
+\draw[thick, red] (A) -- (E) -- (C) -- (D) -- cycle;
+\draw[dashed] (B) -- (E);
+
+% Labels
+\node[above] at (A) {A};
+\node[above] at (B) {B};
+\node[above] at (E) {E};
+\node[below] at (C) {C};
+\node[below] at (D) {D};
+\end{tikzpicture}
+\end{center}
+
+\subsubsection*{Bài 8:} Tính diện tích mảnh đất hình thang ABCD như hình dưới. Biết AB = 12cm, CD = 26cm, diện tích hình chữ nhật ABKD là 168cm$^2$.
+
+\begin{center}
+\begin{tikzpicture}[scale=0.6]
+% Trapezoid with rectangle inside
+\coordinate (A) at (0,3);
+\coordinate (B) at (3,3);
+\coordinate (C) at (8,0);
+\coordinate (D) at (0,0);
+\coordinate (K) at (3,0);
+
+\draw[thick, blue] (A) -- (B) -- (C) -- (D) -- cycle;
+\draw[thick, red] (A) -- (B) -- (K) -- (D) -- cycle;
+\draw[dashed] (B) -- (K);
+
+% Labels
+\node[above] at (A) {A};
+\node[above] at (B) {B};
+\node[below] at (C) {C};
+\node[below] at (D) {D};
+\node[below] at (K) {K};
+
+% Red dots
+\fill[red] (A) circle (2pt);
+\fill[red] (B) circle (2pt);
+\fill[red] (C) circle (2pt);
+\fill[red] (D) circle (2pt);
+\fill[red] (K) circle (2pt);
+\end{tikzpicture}
+\end{center}
+
+\subsubsection*{Bài 9:} Một thửa ruộng hình thang có diện tích là 361,8 m$^2$. Đáy lớn hơn đáy bé là 13,5m. Hãy tính độ dài mỗi đáy, biết rằng nếu tăng đáy lớn thêm 5,6m thì diện tích thửa ruộng sẽ tăng thêm 3,6m$^2$.
+
+\begin{center}
+\begin{tikzpicture}[scale=0.6]
+% Final diagram for Bài 9
+\coordinate (A) at (0,3);
+\coordinate (B) at (3,3);
+\coordinate (C) at (8,0);
+\coordinate (D) at (0,0);
+\coordinate (K) at (3,0);
+
+\draw[thick, blue] (A) -- (B) -- (C) -- (D) -- cycle;
+\draw[thick] (A) -- (K);
+\draw (K) rectangle +(0.3,0.3);
+
+% Labels
+\node[above] at (A) {A};
+\node[above] at (B) {B};
+\node[below] at (C) {C};
+\node[below] at (D) {D};
+\node[below] at (K) {K};
+
+% Red dots
+\fill[red] (A) circle (2pt);
+\fill[red] (B) circle (2pt);
+\fill[red] (C) circle (2pt);
+\fill[red] (D) circle (2pt);
+\fill[red] (K) circle (2pt);
+\end{tikzpicture}
+\end{center}
+
+\subsection*{Dạng 5 – Nhận biết hình bình hành.}
+
+\textbf{Bài 1:} Trong các hình sau đây, hình nào là hình bình hành? Vì sao?
+
+\begin{center}
+\begin{tikzpicture}[scale=0.8]
+% Yellow rectangle
+\draw[thick, black, fill=yellow] (0,0) rectangle (1.5,2);
+
+% Blue diamond/rhombus
+\draw[thick, black, fill=blue!70] (3,1) -- (4,2.5) -- (5,1) -- (4,-0.5) -- cycle;
+
+% Orange parallelogram
+\draw[thick, black, fill=orange] (6.5,0) -- (8.5,0) -- (9,1.5) -- (7,1.5) -- cycle;
+
+% Green irregular quadrilateral
+\draw[thick, black, fill=green!70] (10.5,0) -- (12.5,0.5) -- (12,2) -- (10,1.5) -- cycle;
+
+% Purple parallelogram
+\draw[thick, black, fill=purple!70] (0,-3) -- (2.5,-3) -- (3,-1.5) -- (0.5,-1.5) -- cycle;
+
+% Red trapezoid
+\draw[thick, black, fill=red] (4.5,-3) -- (7,-3) -- (6.5,-1.5) -- (5,-1.5) -- cycle;
+
+% Cyan rectangle
+\draw[thick, black, fill=cyan] (8.5,-3) rectangle (11,-1.5);
+\end{tikzpicture}
+\end{center}
+
+\subsection*{Dạng 6 – Diện tích hình bình hành.}
+
+\textbf{Bài 1:} Cho hình bình hành có cạnh đáy bằng 15cm, cạnh bên bằng 7cm và chiều cao bằng 5cm. Hãy tính chu vi và diện tích của hình bình hành đó.
+
+\begin{center}
+\begin{tikzpicture}[scale=0.8]
+% Parallelogram with measurements
+\coordinate (A) at (0,0);
+\coordinate (B) at (4,0);
+\coordinate (C) at (5.5,2);
+\coordinate (D) at (1.5,2);
+\coordinate (H) at (1.5,0);
+
+\draw[thick, blue] (A) -- (B) -- (C) -- (D) -- cycle;
+\draw[thick] (D) -- (H);
+\draw[dashed] (D) -- (H);
+\draw (H) rectangle +(0.2,0.2);
+
+% Labels
+\node[below] at (2,0) {15 cm};
+\node[left] at (0.75,1) {7 cm};
+\node[right] at (1.5,1) {5 cm};
+\end{tikzpicture}
+\end{center}
+
+\textbf{Bài 2:} Tính diện tích hình bình hành, biết độ dài đáy là 14m, chiều cao bằng nửa độ dài đáy.
+
+\textbf{Bài 3:} Tính diện tích hình bình hành, biết tổng độ dài đáy và chiều cao là 24cm, độ dài đáy hơn chiều cao 4cm.
+
+\textbf{Bài 4:} Một hình bình hành có diện tích bằng 2m$^2$, độ dài đáy bằng 20dm. Tính chiều cao của hình bình hành đó.
+
+\textbf{Bài 5:} Một hình bình hành có diện tích bằng diện tích hình vuông có cạnh 6cm, và hình bình hành này có chiều cao bằng 4cm. Tính độ dài đáy của hình bình hành này.
+
+\textbf{Bài 6:} Một mảnh vườn hình bình hành có độ dài đáy bằng 50m, chiều cao bằng 40m. Trên mảnh vườn này, người ta trồng các cây bưởi, biết rằng cứ 4m$^2$ thì trồng được 1 cây bưởi. Hỏi tối đa có thể trồng được bao nhiêu cây bưởi trên mảnh vườn này?
+
+\textbf{Bài 7:} Trong một khu vườn hình chữ nhật, người ta làm một lối đi lát sỏi hình bình hành có kích thước như hình vẽ sau. Biết chi phí cho mỗi mét vuông làm lối đi hết 120 nghìn đồng. Hỏi chi phí để làm lối đi là bao nhiêu?
+
+\begin{center}
+\begin{tikzpicture}[scale=0.6]
+% Green rectangle (garden)
+\draw[thick, black, fill=green!70] (0,0) rectangle (10,4);
+
+% White parallelogram path inside
+\draw[thick, red, fill=white] (2,0.5) -- (8,0.5) -- (8.5,3.5) -- (2.5,3.5) -- cycle;
+
+% Measurements
+\node[above] at (5,4.2) {2 m};
+\node[left] at (-0.3,2) {20 m};
+\node[below] at (5,-0.5) {2 m};
+
+% Arrow indicators
+\draw[<->] (2,4.5) -- (8,4.5);
+\draw[<->] (-0.8,0) -- (-0.8,4);
+\draw[<->] (2,-1) -- (8,-1);
+\end{tikzpicture}
+\end{center}
+
+\textbf{Bài 8:} Cho hình bình hành có chu vi là 384cm. Biết độ dài cạnh đáy gấp 5 lần độ dài cạnh bên, gấp 8 lần chiều cao. Tính diện tích của hình bình hành.
+
+\textbf{Bài 9:} Có một mảnh đất hình bình hành cạnh đáy là 25m. Nếu người ta cắt giảm mỗi cạnh đáy đi 3m thì diện tích mảnh đất giảm đi 51m$^2$. Tính diện tích mảnh đất sau khi bị cắt giảm đi.
+
+\begin{center}
+\begin{tikzpicture}[scale=0.6]
+% Original parallelogram (dashed)
+\draw[thick, dashed] (0,0) -- (5,0) -- (6,2) -- (1,2) -- cycle;
+
+% Reduced parallelogram (solid)
+\draw[thick, blue] (0.6,0) -- (4.4,0) -- (5,2) -- (1.6,2) -- cycle;
+
+% Labels
+\node[below] at (2.5,-0.5) {25 m};
+\node[above] at (2.5,2.5) {3 m};
+
+% Arrows showing reduction
+\draw[<->] (0,0.5) -- (0.6,0.5);
+\draw[<->] (4.4,0.5) -- (5,0.5);
+\end{tikzpicture}
+\end{center}
+
+\textbf{Bài 10:} Một mảnh đất hình bình hành có cạnh đáy bằng 23m. Người ta mở rộng thêm mảnh đất bằng việc tăng mỗi cạnh đáy thêm 5m thì được hình bình hành mới có diện tích lớn hơn mảnh đất ban đầu là 115m$^2$. Tính diện tích mảnh đất hình bình hành ban đầu.
+
+\textbf{Bài 11:} Một mảnh đất hình bình hành có cạnh đáy bằng 27m. Người ta thu hẹp mảnh đất bằng việc cắt giảm mỗi cạnh đáy đi 5m nên hình bình hành mới có diện tích nhỏ hơn mảnh đất ban đầu là 15m$^2$. Tính diện tích mảnh đất hình bình hành ban đầu.
+
+\textbf{Bài 12:} Một hình bình hành có cạnh đáy là 71cm. Người ta thu hẹp hình bình hành đó đi bằng cách giảm các cạnh đáy của hình bình hành đi 19cm, thì được hình bình hành mới có diện tích nhỏ hơn diện tích hình bình hành ban đầu là 665m$^2$. Tính diện tích hình bình hành ban đầu.
+
+\subsection*{Dạng 7 – Nhận biết hình thoi.}
+
+\subsubsection*{Bài 1:} Trong các hình sau đây, hình nào là hình thoi? Vì sao?
+
+\begin{center}
+\begin{tikzpicture}[scale=0.8]
+% First parallelogram ABCD with tick marks
+\draw[thick] (0,0) -- (2.5,0) -- (3.5,1.5) -- (1,1.5) -- cycle;
+\draw (0.6,0.2) -- (0.8,0) -- (1,0.2);
+\draw (1.6,0.2) -- (1.8,0) -- (2,0.2);
+\draw (2.8,1.3) -- (3,1.5) -- (3.2,1.3);
+\draw (1.8,1.3) -- (2,1.5) -- (2.2,1.3);
+\node[below left] at (0,0) {D};
+\node[below right] at (2.5,0) {C};
+\node[above right] at (3.5,1.5) {B};
+\node[above left] at (1,1.5) {A};
+
+% Second quadrilateral EFGH with different tick marks
+\draw[thick] (5,0) -- (7.5,0) -- (8.5,1.5) -- (6,1.5) -- cycle;
+\draw (5.6,0.2) -- (5.8,0) -- (6,0.2);
+\draw (6.6,0.2) -- (6.8,0) -- (7,0.2);
+\draw (7.8,1.3) -- (8,1.5) -- (8.2,1.3);
+\draw (6.8,1.3) -- (7,1.5) -- (7.2,1.3);
+% Different tick marks on sides
+\draw (5.2,0.7) -- (5,0.9) -- (5.2,1.1);
+\draw (6.2,0.7) -- (6,0.9) -- (6.2,1.1);
+\draw (7.8,0.7) -- (8,0.9) -- (8.2,1.1);
+\draw (8.8,0.7) -- (8.6,0.9) -- (8.8,1.1);
+\node[below left] at (5,0) {H};
+\node[below right] at (7.5,0) {G};
+\node[above right] at (8.5,1.5) {F};
+\node[above left] at (6,1.5) {E};
+
+% Third rhombus IJKM
+\draw[thick] (10.5,0.75) -- (12,0) -- (13.5,0.75) -- (12,1.5) -- cycle;
+\draw (11.1,0.5) -- (11.3,0.3) -- (11.5,0.5);
+\draw (11.9,0.5) -- (12.1,0.3) -- (12.3,0.5);
+\draw (12.1,1.1) -- (12.3,0.9) -- (12.5,1.1);
+\draw (11.1,1.1) -- (11.3,0.9) -- (11.5,1.1);
+% Perpendicular diagonals
+\draw[dashed] (10.5,0.75) -- (13.5,0.75);
+\draw[dashed] (12,0) -- (12,1.5);
+\draw (11.9,0.65) -- (11.9,0.85) -- (12.1,0.85) -- (12.1,0.65);
+\node[left] at (10.5,0.75) {K};
+\node[above] at (12,1.5) {I};
+\node[right] at (13.5,0.75) {N};
+\node[below] at (12,0) {M};
+\end{tikzpicture}
+\end{center}
+
+\subsection*{Dạng 8 – Diện tích hình thoi.}
+
+\subsubsection*{Bài 2:} Tính diện tích hình thoi, biết:
+
+1) Độ dài các đường chéo là 30cm và 7cm.
+
+2) Độ dài các đường chéo là 4m và 15dm.
+
+\subsubsection*{Bài 3:} Tính diện tích hình thoi MBND, biết ABCD là hình vuông có 2 đường chéo AC = BD = 20cm, M là trung điểm của OA, N là trung điểm của OC.
+
+\begin{center}
+\begin{tikzpicture}[scale=0.8]
+% Square ABCD
+\draw[thick, blue] (0,0) rectangle (4,4);
+% Diagonals
+\draw[thick, blue] (0,0) -- (4,4);
+\draw[thick, blue] (0,4) -- (4,0);
+% Center O
+\coordinate (O) at (2,2);
+% Points M and N
+\coordinate (M) at (1,3);
+\coordinate (N) at (3,1);
+% Rhombus MBND
+\draw[thick, red] (M) -- (4,4) -- (N) -- (0,0) -- cycle;
+
+% Labels
+\node[below left] at (0,0) {D};
+\node[below right] at (4,0) {C};
+\node[above right] at (4,4) {B};
+\node[above left] at (0,4) {A};
+\node[above] at (O) {O};
+\node[left] at (M) {M};
+\node[below] at (N) {N};
+\end{tikzpicture}
+\end{center}
+
+\subsubsection*{Bài 4:} Một mảnh vườn hình thoi có tổng độ dài 2 đường chéo là 120cm, độ dài đường chéo thứ nhất bằng một nửa độ dài đường chéo thứ hai. Tính diện tích mảnh vườn hình thoi.
+
+\subsubsection*{Bài 5:} Một mảnh vườn hình thoi có tổng độ dài hai đường chéo là 220. Biết đường chéo thứ nhất bằng $\frac{2}{3}$ độ dài đường chéo thứ hai.
+
+1) Tính diện tích mảnh vườn đó.
+
+2) Người ta dành $\frac{1}{16}$ diện tích mảnh vườn để làm nhà ở và vườn hoa. Tính diện tích còn lại sau khi đã xây nhà ở và vườn hoa.
+
+\subsubsection*{Bài 6:} Một mảnh vườn hình thoi có tổng hai đường chéo bằng 81m, đường chéo thứ nhất hơn đường chéo thứ hai 11m.
+
+1) Tính diện tích mảnh vườn.
+
+2) Trên mảnh vườn người ta dùng 25\% diện tích để trồng rau, 55\% diện tích để trồng ngô. Hỏi diện tích còn lại là bao nhiêu?
+
+\subsubsection*{Bài 7:} Một mảnh vườn hình thoi có độ dài 2 đường chéo là 9m và 6m. Ở giữa vườn người ta xây một hồ cá hình tròn có bán kính là 1,5m và phần còn lại để trồng hoa. Tính diện tính phần trồng hoa.
+
+\subsubsection*{Bài 8:} Một miếng bìa hình bình hành có chu vi bằng 2m. Nếu bớt mỗi cạnh đáy đi 2dm thì ta được miếng bìa hình thoi có diện tích bằng 6dm$^2$. Tính diện tích miếng bìa hình bình hành ban đầu.
+
+\begin{center}
+\begin{tikzpicture}[scale=0.6]
+% Rhombus with area marking
+\draw[thick] (2,0) -- (4,1.5) -- (2,3) -- (0,1.5) -- cycle;
+\draw[dashed] (0,1.5) -- (4,1.5);
+\draw[dashed] (2,0) -- (2,3);
+\node at (2,1.5) {6dm$^2$};
+
+% Labels
+\node[below] at (2,0) {D};
+\node[right] at (4,1.5) {C};
+\node[above] at (2,3) {A};
+\node[left] at (0,1.5) {M};
+\node[right] at (2,1.5) {N};
+
+% Extension to show original parallelogram
+\draw[dashed, red] (0,1.5) -- (-0.5,1.5);
+\draw[dashed, red] (4,1.5) -- (4.5,1.5);
+\draw[dashed, red] (2,3) -- (1.5,4.5);
+\draw[dashed, red] (2,0) -- (1.5,-1.5);
+\draw[thick, red] (-0.5,1.5) -- (1.5,4.5) -- (4.5,1.5) -- (1.5,-1.5) -- cycle;
+\node[above] at (3,2.7) {2dm};
+\node[above] at (1,2.7) {B};
+\end{tikzpicture}
+\end{center}
+
+\subsection*{Bài tập luyện tập:}
+
+\subsubsection*{Bài 1:} Để ốp thêm một mảng tường, người ta dùng 8 viên gạch men hình vuông có cạnh 1dm. Hỏi diện tích mảng tường được ốp thêm là bao nhiêu cm$^2$?
+
+\subsubsection*{Bài 2:} Mai có 10 mẫu que có độ dài lần lượt là: 1cm, 2cm, 3cm, 4cm, 5cm, 6cm, 7cm, 8cm, 9cm, 10cm. Mai muốn dùng 10 mẫu que này để xếp thành một hình thoi mà không bỏ hay cắt bớt bất kì mẫu que nào. Hỏi Mai có thực hiện được không? Vì sao?
+
+\subsubsection*{Bài 3:} Cho hình vẽ:
+
+\begin{center}
+\begin{tikzpicture}[scale=0.8]
+% Complex figure for comparison
+\coordinate (A) at (0,2);
+\coordinate (B) at (2,4);
+\coordinate (C) at (4,2);
+\coordinate (D) at (2,0);
+\coordinate (E) at (6,4);
+\coordinate (F) at (8,2);
+\coordinate (G) at (6,0);
+
+\draw[thick] (A) -- (B) -- (C) -- (D) -- cycle;
+\draw[thick] (B) -- (E) -- (F) -- (C) -- cycle;
+\draw[thick] (A) -- (B) -- (F) -- (G) -- cycle;
+
+\node[left] at (A) {A};
+\node[above] at (B) {B};
+\node[right] at (C) {C};
+\node[below] at (D) {D};
+\node[above] at (E) {E};
+\node[right] at (F) {F};
+\node[below] at (G) {G};
+\end{tikzpicture}
+\end{center}
+
+Hãy so sánh diện tích của các tứ giác ABCD, BEGC và ABGC.
+
+\subsubsection*{Bài 4:} Cho hình bình hành ABCD có AB = 35cm và BC = 30cm, đường cao AH = 42cm. Tính độ dài đường cao AK tương ứng với cạnh BC.
+
+\begin{center}
+\begin{tikzpicture}[scale=0.6]
+% Parallelogram with two heights
+\coordinate (A) at (0,3);
+\coordinate (B) at (4,3);
+\coordinate (C) at (5,0);
+\coordinate (D) at (1,0);
+\coordinate (H) at (1,0);
+\coordinate (K) at (4.2,0);
+
+\draw[thick] (A) -- (B) -- (C) -- (D) -- cycle;
+\draw[thick] (A) -- (H);
+\draw[thick] (A) -- (K);
+\draw (H) rectangle +(0.2,0.2);
+\draw (K) rectangle +(0.2,0.2);
+
+% Labels
+\node[above left] at (A) {A};
+\node[above right] at (B) {B};
+\node[below right] at (C) {C};
+\node[below left] at (D) {D};
+\node[below] at (H) {H};
+\node[below] at (K) {K};
+
+% Measurements
+\node[above] at (2,3) {35cm};
+\node[right] at (4.5,1.5) {30cm};
+\node[left] at (0.5,1.5) {42cm};
+\end{tikzpicture}
+\end{center}
+
+\subsubsection*{Bài 5:} Một thửa đất hình chữ nhật có chu vi là 240m. Người ta giảm chiều dài đi 4m, tăng chiều rộng thêm 4m để thửa đất trở thành hình vuông.
+
+1) Hãy so sánh chu vi thửa đất mới với thửa ban đầu.
+
+2) Hãy so sánh diện tích thửa đất mới với thửa ban đầu.
+
+\subsubsection*{Bài 6:} Người ta cần xây tường rào cho một khu vườn có kích thước như hình vẽ bên dưới. Mỗi mét dài (mét tới) tường rào tốn 150 nghìn đồng. Hỏi cần phải mất bao nhiêu tiền để xây dựng tường rào bao quanh cả khu vườn?
+
+\subsubsection*{Bài 7:} Tính chu vi và diện tích của hình sau:
+
+\begin{center}
+\begin{tikzpicture}[scale=0.8]
+% L-shaped figure
+\draw[thick, fill=green!70] (0,0) rectangle (10,3);
+\draw[thick, fill=green!70] (10,0) rectangle (13,9);
+\draw[thick, fill=white] (0,3) rectangle (10,9);
+
+% Measurements
+\node[below] at (5,-0.3) {10 m};
+\node[below] at (11.5,-0.3) {3 m};
+\node[left] at (-0.3,1.5) {3 m};
+\node[left] at (-0.3,6) {3 m};
+\node[right] at (13.3,4.5) {7 cm};
+\node[above] at (6.5,9.3) {8 cm};
+\node[above] at (11.5,9.3) {5 cm};
+
+% Dimension arrows
+\draw[<->] (0,-0.8) -- (10,-0.8);
+\draw[<->] (10,-0.8) -- (13,-0.8);
+\draw[<->] (-0.8,0) -- (-0.8,3);
+\draw[<->] (-0.8,3) -- (-0.8,6);
+\draw[<->] (-0.8,6) -- (-0.8,9);
+\end{tikzpicture}
+\end{center}
+
+\subsubsection*{Bài 8:} Một mảnh vườn có hình dạng như hình vẽ bên dưới. Hãy tính diện tích của mảnh vườn này, biết rằng: BC = 30m, AD = 42m, BM = 22m, EN = 28m.
+
+\begin{center}
+\begin{tikzpicture}[scale=0.6]
+% Hexagonal garden
+\coordinate (A) at (0,2);
+\coordinate (B) at (2,4);
+\coordinate (C) at (6,4);
+\coordinate (D) at (8,2);
+\coordinate (E) at (6,0);
+\coordinate (F) at (2,0);
+\coordinate (M) at (2,2);
+\coordinate (N) at (6,2);
+
+\draw[thick] (A) -- (B) -- (C) -- (D) -- (E) -- (F) -- cycle;
+\draw[dashed] (A) -- (M) -- (D);
+\draw[dashed] (B) -- (M);
+\draw[dashed] (C) -- (N);
+\draw[dashed] (E) -- (N);
+
+% Labels
+\node[left] at (A) {A};
+\node[above] at (B) {B};
+\node[above] at (C) {C};
+\node[right] at (D) {D};
+\node[below] at (E) {E};
+\node[below] at (F) {F};
+\node at (M) {M};
+\node at (N) {N};
+\end{tikzpicture}
+\end{center}
+
+\subsubsection*{Bài 8:} Một khu vườn hình chữ nhật có chiều dài 25m, chiều rộng 15m. Ở giữa khu vườn này, người ta xây một bồn hoa hình thoi có độ dài hai đường chéo là 5m và 3m. Tính diện tính phần còn lại của khu vườn.
+
+\begin{center}
+\begin{tikzpicture}[scale=0.6]
+% Rectangle with rhombus inside
+\draw[thick, fill=cyan!70] (0,0) rectangle (10,6);
+\draw[thick, fill=white] (5,2) -- (6.5,3) -- (5,4) -- (3.5,3) -- cycle;
+
+% Labels showing it's a rhombus flower bed
+\node at (5,3) {\small Bồn hoa};
+\end{tikzpicture}
+\end{center}
+
+\subsubsection*{Bài 9:} Tính chu vi và diện tích của hình được tô đậm sau:
+
+\begin{center}
+\begin{tikzpicture}[scale=0.6]
+% Main green rectangle with trapezoidal cutout
+\draw[thick, fill=green!70] 
+  (0,0) rectangle (17,9)
+  (2,0) -- (5.5,5) -- (11.5,5) -- (15,0) -- (2,0);
+\draw[thick, fill=white] (2,0) -- (5.5,5) -- (11.5,5) -- (15,0) -- cycle;
+
+% Measurements - main rectangle
+\node[above] at (8.5,9.5) {17 m};
+\node[left] at (-0.5,4.5) {9 m};
+
+% Bottom measurements
+\node[below] at (1,-0.5) {4 m};
+\node[below] at (8.5,-0.5) {9 m};
+\node[below] at (16,-0.5) {4 m};
+
+% Trapezoid measurements
+\node[above] at (8.5,4) {3 m};
+\node[above left] at (3.75,2.5) {5 m};
+\node[above right] at (13.25,2.5) {5 m};
+\node[right] at (8.5,7.5) {5 m};
+
+% Trapezoid dimension arrows
+\draw[<->] (8.5,5) -- (8.5,9);
+\draw[<->] (2,0) -- (15,0);
+\end{tikzpicture}
+\end{center}
 \end{document}
