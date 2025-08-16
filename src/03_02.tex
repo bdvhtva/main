@@ -1,0 +1,160 @@
+\documentclass[12pt]{article}
+\usepackage[utf8]{inputenc}
+\usepackage{enumitem}
+\setlist[itemize]{leftmargin=\parindent, itemsep=0pt, parsep=0pt, topsep=0pt}
+\usepackage[T5]{fontenc}
+\usepackage[vietnamese]{babel}
+\usepackage[margin=2.5cm]{geometry}
+\usepackage{mathptmx}
+\usepackage{fancyhdr}
+\usepackage{tikz}
+\tikzset{every path/.style={draw=cyan, very thick}}
+\usetikzlibrary{calc,positioning,arrows.meta}
+\usepackage{caption}
+\usepackage{paracol}
+\columnratio{0.55,0.43}
+\setlength{\columnsep}{0.02\textwidth}
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[L]{\textbf{TÊN TRUNG TÂM}}
+\fancyhead[C]{\textbf{ZALO LIÊN HỆ}}
+\fancyhead[R]{\textbf{Toán 6}}
+\fancyfoot[C]{\thepage}
+\renewcommand{\footrulewidth}{0.4pt}
+\begin{document}
+\thispagestyle{fancy}
+\newpage
+\section{Hình chữ nhật}
+\begin{paracol}{2}
+Cho hình chữ nhật \(ABCD\) (Hình 1).
+\begin{itemize}
+  \item[a)] Đo rồi so sánh các cạnh và góc của hình chữ nhật.
+  \item[b)] Hãy kiểm tra xem hai cặp cạnh \(AB\) và \(CD\), \(BC\) và \(AD\) có song song với nhau không.
+  \item[c)] \(AC\) và \(BD\) được gọi là hai \textbf{đường chéo} của hình chữ nhật.
+\end{itemize}
+Hãy đo rồi so sánh \(AC\) và \(BD\).
+\switchcolumn
+\centering
+\begin{tikzpicture}[scale=1]
+  \def\w{3.5}
+  \def\h{2}
+  \def\ra{0.25}
+  \coordinate (A) at (0,\h);
+  \coordinate (B) at (\w,\h);
+  \coordinate (C) at (\w,0);
+  \coordinate (D) at (0,0);
+  \coordinate (O) at ($ (A)!0.5!(C) $);
+  \draw (A)--(B)--(C)--(D)--cycle;
+  \draw (A)--(C);
+  \draw (B)--(D);
+  \node[below] at (O) {$O$};
+  \begin{scope}[shift={(A)}] \draw (0,0)--(\ra,0)--(\ra,-\ra)--(0,-\ra); \end{scope}
+  \begin{scope}[shift={(B)}] \draw (0,0)--(0,-\ra)--(-\ra,-\ra)--(-\ra,0); \end{scope}
+  \begin{scope}[shift={(C)}] \draw (0,0)--(-\ra,0)--(-\ra,\ra)--(0,\ra); \end{scope}
+  \begin{scope}[shift={(D)}] \draw (0,0)--(\ra,0)--(\ra,\ra)--(0,\ra); \end{scope}
+  \node[above left]  at (A) {A};
+  \node[above right] at (B) {B};
+  \node[below right] at (C) {C};
+  \node[below left]  at (D) {D};
+  \node[inner sep=0pt, outer sep=0pt] at ($(D)!0.5!(C) + (0,-1)$) {Hình 1};
+\end{tikzpicture}
+\vspace{-\baselineskip}
+\end{paracol}
+\section{Hình thoi}
+\begin{paracol}{2}
+Cho hình thoi \(ABCD\) như Hình 2.
+\begin{itemize}
+  \item[a)] Hãy đo rồi so sánh các cạnh của hình thoi.
+  \item[b)] Hãy kiểm tra xem hai cặp cạnh \(AB\) và \(CD\), \(BC\) và \(AD\) có song song với nhau không.
+  \item[c)] \(AC\) và \(BD\) được gọi là hai \textbf{đường chéo} của hình thoi. Dùng êke để kiểm tra xem hai đuờng chéo có vuông góc với nhau hay không.
+\end{itemize}
+\switchcolumn
+\centering
+\begin{tikzpicture}[scale=1]
+  \def\hx{1.73} 
+  \def\hy{1}
+  \def\ra{0.18} 
+  \coordinate (O) at (0,0);
+  \coordinate (A) at (-\hx,0);
+  \coordinate (B) at (0,\hy);
+  \coordinate (C) at (\hx,0);
+  \coordinate (D) at (0,-\hy); 
+  \draw (A)--(B)--(C)--(D)--cycle;
+  \draw (A)--(C);
+  \draw (B)--(D);
+  \begin{scope}[shift={(O)}]
+    \draw (0,0)--(\ra,0)--(\ra,\ra)--(0,\ra);
+  \end{scope}
+  \node[below right] at (O) {$O$};
+  \node[left]  at (A) {A};
+  \node[above] at (B) {B};
+  \node[right] at (C) {C};
+  \node[below] at (D) {D};
+  \node at ($(D) + (0,-1)$) {Hình 2};
+\end{tikzpicture}
+\vspace{-\baselineskip}
+\end{paracol}
+\section{Hình bình hành}
+\begin{paracol}{2}
+Cho hình bình hành \(ABCD\) như Hình 3.
+\begin{itemize}
+  \item[a)] Hãy đo rồi so sánh cạnh \(AB\) và \(CD\); cạnh \(BC\) và \(AD\).
+  \item[b)] Hãy kiểm tra xem hai cặp cạnh \(AB\) và \(CD\), \(BC\) và \(AD\) có song song với nhau không.
+  \item[c)] \(AC\) và \(BD\) được gọi là hai \textbf{đường chéo} của hình bình hành.
+\end{itemize}
+Hai đường chéo \(AC\) và \(BD\) cắt nhau tại \(O\). Hãy so sánh \(OA\) và \(OC\); \(OB\) và \(OD\).
+\switchcolumn
+\centering
+\begin{tikzpicture}[scale=1]
+  \def\w{3.5}
+  \def\h{2}
+  \coordinate (D) at (0,0);
+  \coordinate (C) at (\w,0);
+  \coordinate (A) at (1.0,\h);
+  \coordinate (B) at (\w+1.0,\h); 
+  \draw (A)--(B)--(C)--(D)--cycle;
+  \draw (A)--(C);
+  \draw (B)--(D); 
+  \coordinate (O) at ($ (A)!0.5!(C) $);
+  \node[below] at (O) {$O$}; 
+  \node[above left]  at (A) {A};
+  \node[above right] at (B) {B};
+  \node[below right] at (C) {C};
+  \node[below left]  at (D) {D};
+  \node at ($(D)!0.65!(C) + (0,-1)$) {Hình 3};
+\end{tikzpicture}
+\vspace{-\baselineskip}
+\end{paracol}
+\section{Hình thang cân}
+\begin{paracol}{2}
+Cho hình thang \(ABCD\) như Hình 4.
+\begin{itemize}
+  \item[a)] Hãy đo rồi so sánh hai cạnh bên \(BC\) và \(AD\).
+  \item[b)] Hãy kiểm tra xem \(AB\) có song song với \(CD\) hay không.
+  \item[c)] \(AC\) và \(BD\) được gọi là hai \textbf{đường chéo}. Hãy đo rồi so sánh \(AC\) và \(BD\).
+\end{itemize}
+\switchcolumn
+\begin{center}
+\begin{tikzpicture}[scale=1] 
+  \def\topw{2.5}
+  \def\botw{3.5} 
+  \def\h{2}
+  \pgfmathsetmacro{\offset}{(\botw - \topw) / 2}
+  \coordinate (D) at (0,0);
+  \coordinate (C) at (\botw,0);
+  \coordinate (B) at (\offset+\topw,\h);
+  \coordinate (A) at (\offset,\h);
+  \draw (A)--(B)--(C)--(D)--cycle;
+  \draw (A)--(C);
+  \draw (B)--(D);
+  \coordinate (O) at ($ (A)!0.4!(C) $);
+  \node[below] at (O) {$O$}; 
+  \node[above left]  at (A) {A};
+  \node[above right] at (B) {B};
+  \node[below right] at (C) {C};
+  \node[below left]  at (D) {D};
+  \node at ($(D)!0.5!(C) + (0,-1)$) {Hình 4};
+\end{tikzpicture}
+\end{center}
+\end{paracol}
+\end{document}

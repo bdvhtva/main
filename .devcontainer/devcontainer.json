@@ -9,5 +9,5 @@
 			]
 		}
 	},
-	"postCreateCommand": "sudo apt-get update && sudo apt-get install latexmk texlive-extra-utils texlive-fonts-recommended texlive-lang-other -y"
+	"postCreateCommand": "sudo apt-get update && sudo apt-get install latexmk texlive-extra-utils texlive-fonts-recommended texlive-lang-other texlive-latex-extra -y"
 }
