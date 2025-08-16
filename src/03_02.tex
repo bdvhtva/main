@@ -8,6 +8,8 @@
 \usepackage{mathptmx}
 \usepackage{fancyhdr}
 \usepackage{tikz}
+\usepackage{titling}
+\setlength{\droptitle}{-2cm}
 \tikzset{every path/.style={draw=cyan, very thick}}
 \usetikzlibrary{calc,positioning,arrows.meta}
 \usepackage{caption}
@@ -36,6 +38,7 @@ Bài 2 & Hình chữ nhật – Hình thoi \\
 
 \begin{document}
 \maketitle
+\vspace{-4cm}
 \thispagestyle{fancy}
 \section{Hình chữ nhật}
 \begin{paracol}{2}
@@ -77,17 +80,18 @@ Hình chữ nhật \(ABCD\) (Hình 1) có:
 \end{paracol}
 \section{Hình thoi}
 \begin{paracol}{2}
-Cho hình thoi \(ABCD\) như Hình 2.
+Hình thoi \(ABCD\) (Hình 2) có:
 \begin{itemize}
-  \item[a)] Hãy đo rồi so sánh các cạnh của hình thoi.
-  \item[b)] Hãy kiểm tra xem hai cặp cạnh \(AB\) và \(CD\), \(BC\) và \(AD\) có song song với nhau không.
-  \item[c)] \(AC\) và \(BD\) được gọi là hai \textbf{đường chéo} của hình thoi. Dùng êke để kiểm tra xem hai đuờng chéo có vuông góc với nhau hay không.
+  \item[--] Bốn đỉnh \(A\), \(B\), \(C\), \(D\).
+  \item[--] Bốn cạnh bằng nhau: \(AB = BC = CD = DA\).
+  \item[--] Hai cặp cạnh đối diện song song: \(AB\) song song với \(CD\); \(BC\) song song với \(AD\).
+  \item[--] Hai đường chéo \(AC\) và \(BD\) vuông góc với nhau.
 \end{itemize}
 \switchcolumn
 \centering
 \begin{tikzpicture}[scale=1]
   \def\hx{1.73} 
-  \def\hy{1}
+  \def\hy{0.5}
   \def\ra{0.18} 
   \coordinate (O) at (0,0);
   \coordinate (A) at (-\hx,0);
@@ -111,13 +115,16 @@ Cho hình thoi \(ABCD\) như Hình 2.
 \end{paracol}
 \section{Hình bình hành}
 \begin{paracol}{2}
-Cho hình bình hành \(ABCD\) như Hình 3.
+Hình bình hành \(ABCD\) (Hình 3) có:
 \begin{itemize}
-  \item[a)] Hãy đo rồi so sánh cạnh \(AB\) và \(CD\); cạnh \(BC\) và \(AD\).
-  \item[b)] Hãy kiểm tra xem hai cặp cạnh \(AB\) và \(CD\), \(BC\) và \(AD\) có song song với nhau không.
-  \item[c)] \(AC\) và \(BD\) được gọi là hai \textbf{đường chéo} của hình bình hành.
+  \item[--] Bốn đỉnh \(A\), \(B\), \(C\), \(D\).
+  \item[--] Hai cặp cạnh đối diện bằng nhau:
+  
+  \(AB = CD\); \(BC = AD\).
+  \item[--] Hai cặp cạnh đối diện song song: \(AB\) song song với \(CD\); \(BC\) song song với \(AD\).
+  \item[--] Hai cặp góc đối diện bằng nhau: góc đỉnh \(A\) bằng góc đỉnh \(C\), góc đỉnh \(B\) bằng góc đỉnh \(D\).
+  \item[--] Hai đường chéo cắt nhau tại trung điểm của mỗi đường: \(OA = OC\); \(OB = OD\).
 \end{itemize}
-Hai đường chéo \(AC\) và \(BD\) cắt nhau tại \(O\). Hãy so sánh \(OA\) và \(OC\); \(OB\) và \(OD\).
 \switchcolumn
 \centering
 \begin{tikzpicture}[scale=1]
@@ -142,12 +149,14 @@ Hai đường chéo \(AC\) và \(BD\) cắt nhau tại \(O\). Hãy so sánh \(OA
 \end{paracol}
 \section{Hình thang cân}
 \begin{paracol}{2}
-Cho hình thang \(ABCD\) như Hình 4.
+Hình thang \(ABCD\) (Hình 4) có:
 \begin{itemize}
-  \item[a)] Hãy đo rồi so sánh hai cạnh bên \(BC\) và \(AD\).
-  \item[b)] Hãy kiểm tra xem \(AB\) có song song với \(CD\) hay không.
-  \item[c)] \(AC\) và \(BD\) được gọi là hai \textbf{đường chéo}. Hãy đo rồi so sánh \(AC\) và \(BD\).
+  \item[--] Hai cạnh đáy song song: \(AB\) song song với \(CD\).
+  \item[--] Hai cạnh bên bằng nhau: \(BC = AD\).
+  \item[--] Hai góc kề một đáy bằng nhau: góc đỉnh \(A\) bằng góc đỉnh \(B\), góc đỉnh \(C\) bằng góc đỉnh \(D\).
+  \item[--] Hai đường chéo bằng nhau: \(AC = BD\).
 \end{itemize}
+Hình thang \(ABCD\) như thế được gọi là \textbf{hình thang cân}.
 \switchcolumn
 \begin{center}
 \begin{tikzpicture}[scale=1] 
